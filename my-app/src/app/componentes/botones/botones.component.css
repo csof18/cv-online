@@ -1,0 +1,7 @@
+.redesYlogin{
+    display: flex;
+    justify-content: flex-end;
+}
+a:hover{
+    color: rgba(243, 243, 248, 0.718);
+}

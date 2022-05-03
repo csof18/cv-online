@@ -1,0 +1,14 @@
+.gridEducacion{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "titulos cursos";
+}
+.titulos{
+    grid-area: titulos;
+    position: relative;
+}
+.cursos{
+    grid-area: cursos;
+    position: relative;
+}

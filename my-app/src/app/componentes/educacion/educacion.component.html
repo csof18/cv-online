@@ -1,62 +1,23 @@
-<div>
-    <h3>Educacion</h3>
-    <ol>
-        <li>Desarrollo Full-stack
-            2021-Actualidad | Argentina Programa
-        </li>
-        <li>Desarrollo Front End
-            2021 | CoderHouse
-        </li>
-        <li>Instructorado de Acrobacia Aerea
-            2017 | Entre el cielo y la tierra | Escuela de arte circense
-        </li>
-        <li>
-            Profesional Gastronomico | Chef
-            2013-2015 | EAG | Escuela de Arte Gastronomico
-        </li>
-        <li>
-            Fotógrafa Profesional
-            2011-2012 | Centro Argentino Fotografico
-        </li>
-        <li>Bachiller en Humanidades y Ciencias Sociales
-            2010 | Escuela Gral. D. M. Belgrano N13
-        </li>
-    </ol>
-</div>
-<div>
-    <h3>Cursos</h3>
-    <ol>
-        <li>
-            Argentina Programa
-            Mar 2022-Jun 2022 | Ingles para desarrollo de software
-        </li>
-        <li>
-            Argentina Programa
-            Nov 2021-May 2022 | #YoProgramo
-        </li>
-        <li>
-            Argentina Programa
-            Ago 2021-Oct 2021 | #SéProgramar
-        </li>
-        <li>
-            CoderHouse
-            Jul 2021-Ago 2021 | React Js
-        </li>
-        <li>
-            CoderHouse
-            May 2021-jul 2021 | JavaScript
-        </li>
-        <li>
-            CoderHouse
-            Feb 2021-May 2021 | Desarrollo Web
-        </li>
-        <li>
-            Student Chapter IEEE-ITBA
-            Oct 2020-Dic 2020 | Introducción de Python
-        </li>
-        <li>
-            Le Wagon
-            Jun 2020-Ago 2020 | Introducción a la programación
-        </li>
-    </ol>
-</div>
+<section class="gridEducacion">
+    <div class="titulos m-2">
+        <app-botones-de-edicion></app-botones-de-edicion>
+        <h3>Educacion</h3>
+        <ol>
+            <li *ngFor="let educacion of listaEducacion">
+                <h6>{{educacion.titulo}}</h6>
+                <p><time>{{educacion.fecha_inicio}}</time> | <time>{{educacion.fecha_fin}}</time> | {{educacion.establecimiento}}</p>
+                
+            </li>
+        </ol>
+    </div>
+    <div class="cursos m-2">
+        <app-botones-de-edicion></app-botones-de-edicion>
+        <h3>Cursos</h3>
+        <ol>
+            <li *ngFor="let cursos of listacursos">
+                <h6>{{cursos.titulo}}</h6>
+                <p><time>{{cursos.fecha_inicio}}</time> | <time>{{cursos.fecha_fin}}</time> | {{cursos.establecimiento}}</p>
+            </li>
+        </ol>
+    </div>
+</section>

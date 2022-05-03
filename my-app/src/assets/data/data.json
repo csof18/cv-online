@@ -1,6 +1,230 @@
 {
-    "nombre": "maria marta",
-    "apellido": "perez",
-    "edad": "30",
-    "mascota": "rata"
+    "informacion_personal": {
+        "banner" : "/assets/img/banner2.jpg",
+        "foto_perfil" : "/assets/img/fotoDePerfil.jpg",
+        "nombre" : "Sofia",
+        "apellido": "Corrado",
+        "titulo" : "Full Stack Developer Jr."
+    },
+    "experiencia" : [
+        {
+            "posicion" : "Atención al público, call center",
+            "fecha_inicio" : "Ene 2021",
+            "fecha_fin" : "Feb 2021",
+            "empresa" : "Mera Solutions"
+        },
+        {
+            "posicion" : "Atención al publico, ventas",
+            "fecha_inicio" : "Nov 2014",
+            "fecha_fin" : "Nov 2020",
+            "empresa" : "Joyería Giovanni"
+        },
+        {
+            "posicion" : "Instructora de Acrobacia Aerea",
+            "fecha_inicio" : "Mar 2016",
+            "fecha_fin" : "Sep 2019",
+            "empresa" : "Profesora suplente de acorbacia en telas"
+        },
+        {
+            "posicion" : "Atención al publico, ventas",
+            "fecha_inicio" : "Ago 2014",
+            "fecha_fin" : "Nov 2014",
+            "empresa" : "Las Cañitas"
+        },
+        {
+            "posicion" : "Encargada, auxiliar de animación, camarera",
+            "fecha_inicio" : "Dic 2010",
+            "fecha_fin" : "Nov 2014",
+            "empresa" : "Aquarela Fiestas infantiles"
+        },
+        {
+            "posicion" : "Atención al público, recepción y distribución",
+            "fecha_inicio" : "Dic 2009",
+            "fecha_fin" : "Mar 2011",
+            "empresa" : "Fabrica de Bastidores Clan Corrado"
+        }
+    ],
+    "educacion" : [
+        {
+            "titulo" : "Desarrollo Full-stack",
+            "fecha_inicio" : "Ago 2021",
+            "fecha_fin" : "Actualidad",
+            "establecimiento" : "Argentina Programa"
+        },
+        {
+            "titulo" : "Desarrollo Front End",
+            "fecha_inicio" : "Feb 2021",
+            "fecha_fin" : "Ago 2021",
+            "establecimiento" : "CoderHouse"
+        },
+        {
+            "titulo" : "Instructorado de Acrobacia Aérea",
+            "fecha_inicio" : "Feb 2017",
+            "fecha_fin" : "Dic 2017",
+            "establecimiento" : "Entre el cielo y la tierra | Escuela de arte circense"
+        },
+        {
+            "titulo" : "Profesional Gastronómico | Chef",
+            "fecha_inicio" : "Mar 2013",
+            "fecha_fin" : "Jul 2015",
+            "establecimiento" : "EAG | Escuela de Arte Gastronómico"
+        },
+        {
+            "titulo" : "Fotógrafa Profesional",
+            "fecha_inicio" : "Mar 2011",
+            "fecha_fin" : "Dic 2012",
+            "establecimiento" : "Centro Argentino Fotográfico"
+        },
+        {
+            "titulo" : "Bachiller en Humanidades y Ciencias Sociales",
+            "fecha_inicio" : "Mar 2008",
+            "fecha_fin" : "Dic 2010",
+            "establecimiento" : "Escuela Gral. D. M. Belgrano N13"
+        }
+    ],
+    "cursos" : [
+        {
+            "titulo" : "Ingles para desarrollo de software",
+            "fecha_inicio" : "Mar 2022",
+            "fecha_fin" : "Jun 2022",
+            "establecimiento" : "Argentina Programa"
+        },
+        {
+            "titulo" : "#YoProgramo",
+            "fecha_inicio" : "Nov 2021",
+            "fecha_fin" : "May 2022",
+            "establecimiento" : "Argentina Programa"
+        },
+        {
+            "titulo" : "#SéProgramar",
+            "fecha_inicio" : "Ago 2021",
+            "fecha_fin" : "Oct 2021",
+            "establecimiento" : "Argentina Programa"
+        },
+        {
+            "titulo" : "React Js",
+            "fecha_inicio" : "Jul 2021",
+            "fecha_fin" : "Ago 2021",
+            "establecimiento" : "CoderHouse"
+        },
+        {
+            "titulo" : "JavaScript",
+            "fecha_inicio" : "May 2021",
+            "fecha_fin" : "Jul 2021",
+            "establecimiento" : "CoderHouse"
+        },
+        {
+            "titulo" : "Desarrollo Web",
+            "fecha_inicio" : "Feb 2021",
+            "fecha_fin" : "May 2021",
+            "establecimiento" : "CoderHouse"
+        },
+        {
+            "titulo" : "Introducción de Python",
+            "fecha_inicio" : "Oct 2020",
+            "fecha_fin" : "Dic 2020",
+            "establecimiento" : "Student Chapter IEEE-ITBA"
+        },
+        {
+            "titulo" : "Introducción a la programación",
+            "fecha_inicio" : "Jun 2020",
+            "fecha_fin" : "Ago 2020",
+            "establecimiento" : "Le Wagon"
+        }
+    ],
+    "habilidades" : {
+        "blandas" : [{
+            "habilidad" : "Atención a los detalles",
+            "img" : "/assets/img/atencionEnLosDetalles.jpg"
+        },
+        {
+            "habilidad" : "Creatividad",
+            "img" : "/assets/img/creatividad.jpeg"
+        },
+        {
+            "habilidad" : "Trabajo en equipo",
+            "img" : "/assets/img/trabajoEnEquipo.jpg"
+        },
+        {
+            "habilidad" : "Empatía",
+            "img" : "/assets/img/empatia.jpg"
+        }],
+        "duras" : [{
+            "habilidad" : "HTML",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/html.jpg"
+        },
+        {
+            "habilidad" : "CSS",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/css.jpg"
+        },
+        {
+            "habilidad" : "JavaScript",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/javascript.jpg"
+        },
+        {
+            "habilidad" : "TypeScript",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/typescript.jpg"
+        },
+        {
+            "habilidad" : "Node Js",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/nodejs.jpg"
+        },
+        {
+            "habilidad" : "React Js",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/react.jpg"
+        },
+        {
+            "habilidad" : "Angular",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/angular.png"
+        },
+        {
+            "habilidad" : "Java",
+            "nivel" : "bi bi-star colorEstrella",
+            "img" : "/assets/img/java.jpg"
+        }]
+    },
+    "proyectos" : [
+        {
+            "nombre" : "Full stack developer",
+            "fecha" : "Abr 2022",
+            "descripcion" : "Creación de curriculom vitae propio y facilmente amoldable a optro usuario en un futuro.",
+            "tecnologias" : ["HTML", "CSS", "Bootstrap", "Angular", "Typescript", "Java", "GIT"],
+            "link" : "LINK A GIT"
+            },
+        {
+            "nombre" : "Regalame y regalate",
+            "fecha" : "Ago 2021",
+            "descripcion" : "Desarrollo de sitio web responsive con carrito de compras incluido",
+            "tecnologias" : ["HTML", "CSS", "Bootstrap", "JavaScript", "React Js", "Node Js", "GIT"],
+            "link" : "LINK A GIT"
+        },
+        {
+            "nombre" : "Formulario de inscripciones para colegios",
+            "fecha" : "Jul 2021",
+            "descripcion" : "Desarrollo de formulario dinamico utilizado para consultar e inscribir alumnos en un establecimiento",
+            "tecnologias" : ["HTML", "CSS", "Bootstrap", "JavaScript", "Jquery", "GIT"],
+            "link" : "LINK A GIT"
+        },
+        {
+            "nombre" : "Vida en pixeles",
+            "fecha" : "May 2021",
+            "descripcion" : "Desarrollo de sitio web responsive basada en una agencia de fotografía",
+            "tecnologias" : ["HTML", "CSS", "SASS", "Bootstrap", "GIT"],
+            "link" : "LINK A GIT"
+        },
+        {
+            "nombre" : "Escuela de Arte Culinario Argentino",
+            "fecha" : "Ago 2020",
+            "descripcion" : "Desarrollo de pagina web responsive de una escuela gastronomica",
+            "tecnologias" : ["HTML", "CSS", "Bootstrap", "GIT"],
+            "link" : "LINK A GIT"
+        }
+    ]
 }

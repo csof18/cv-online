@@ -1,0 +1,16 @@
+.datosPersonales{
+    position: relative;
+}
+.perfil{
+    position: absolute;
+    width: 140px;
+    height: 130px;
+    left: 4%;
+    bottom: 50%;
+}
+.datos{
+    position: relative;
+    text-align: justify;
+    top: 50px;
+    left: 4%;
+}
