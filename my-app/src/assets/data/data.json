@@ -4,7 +4,8 @@
         "foto_perfil" : "/assets/img/fotoDePerfil.jpg",
         "nombre" : "Sofia",
         "apellido": "Corrado",
-        "titulo" : "Full Stack Developer Jr."
+        "titulo" : "Full Stack Developer Jr.",
+        "acerca_de": "Soy una persona proactiva, motivada por obtener nuevos conocimientos. Luego de trabajar 10 años en ventas y atención al público, decidí cambiar de rumbo y dedicarme al desarrollo web, hoy en día me encuentro en búsqueda de mi primer empleo en el ámbito IT para continuar desarrollándome en nuevas tecnologías y metodologías que me permitan crecer"
     },
     "experiencia" : [
         {
@@ -208,7 +209,7 @@
         {
             "nombre" : "Formulario de inscripciones para colegios",
             "fecha" : "Jul 2021",
-            "descripcion" : "Desarrollo de formulario dinamico utilizado para consultar e inscribir alumnos en un establecimiento",
+            "descripcion" : "Desarrollo de formulario dinámico utilizado para consultar e inscribir alumnos en un establecimiento",
             "tecnologias" : ["HTML", "CSS", "Bootstrap", "JavaScript", "Jquery", "GIT"],
             "link" : "LINK A GIT"
         },

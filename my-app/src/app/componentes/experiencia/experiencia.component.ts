@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataPorfolio } from 'src/app/modulos/data-porfolio';
+import { LoginService } from 'src/app/servicios/login.service';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
@@ -7,14 +9,21 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  listaExperiencia:any;
+  public listaExperiencia:any;
 
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(
+    private datosPorfolio:PorfolioService
+    //private servicioLogin: LoginService 
+    ) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
+    this.datosPorfolio.obtenerDatos().subscribe((data: DataPorfolio) => {
       this.listaExperiencia = data.experiencia;
     })
+    /*this.servicioLogin.disparadorDeLogin.subscribe(data => {
+      console.log('RECIBIENDO DATA  ', data);
+      this.
+    })*/
   }
 
 }

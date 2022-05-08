@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { style } from '@angular/animations';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import { debounceTime } from 'rxjs';
+import { LoginService } from 'src/app/servicios/login.service';
+
 
 @Component({
   selector: 'app-login',
@@ -8,45 +11,59 @@ import { debounceTime } from 'rxjs';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form = new FormGroup({
-    nombre: new FormControl('', [Validators.minLength(4)]),
-      usuario: new FormControl('', [Validators.email]),
-      contrasenia: new FormControl('', [Validators.required])
+  @ViewChild('usersPassword')
+  usersPass!: ElementRef;
+  renderer2!: Renderer2;
+  public loginForm = new FormGroup({
+    users: new FormControl('', [
+        Validators.required,
+        Validators.email
+      ]),
+    password: new FormControl('', [
+      Validators.required,
+      Validators.minLength(5),
+      Validators.maxLength(15)
+    ])
   });
-  constructor() { 
-   // this.buildForm();
+  constructor(private servicioLogin: LoginService
+    ) { 
+     //renderer2: Renderer2
   }
 
   ngOnInit(): void {
   }
-get nombre(): any{
-    return this.form.get('nombre',)
+  get users(): any{
+    return this.loginForm.get('users')
+  }
+  get password(): any{
+    return this.loginForm.get('password')
+  }
+  onSubmit(): void{
+    console.log(this.loginForm.value);
+  }
+  registrarse() {
+    const usersPassword = this.usersPass.nativeElement;
+    //this.renderer2.setStyle(usersPassword, style:"color", value:"red")
+    console.log('ME TOCARON');
+  }
+  //style({ background: "red", color: "blue" })
+  
+  
+  /*
+  change(): void{
+    const usersPassword = this.usersPass.nativeElement;
+    console.log(' VER VALOR DE usersPassword', usersPassword);
+    this.renderer2.setStyle(usersPassword, style: "color", value: "red");
+  }
+*/
 
-}
-onSubmit(): void{
-  console.log(this.form.value);
-}
-setValue(){
-  this.form.setValue({nombre:'marta', contrasenia: 'conga'});
-}
- /* private buildForm(){
-    this.form = new FormGroup({
-      nombre: new FormControl('', [Validators.maxLength(8)]),
-      usuario: new FormControl('', [Validators.email]),
-      contrasenia: new FormControl('', [Validators.required])
-    });
-    this.form.valueChanges
-    .pipe(
-      debounceTime(400)
-      )
-    }
-    */
-}
 
 
-
-/*
-  formularioLogin = new FormGroup({
-    usuarioMail: new FormControl('', Validators.required),
-    usuarioPassword: new FormControl('', Validators.required)
-  })*/
+  /*
+  login(){
+    //console.log(this.dataEntrante);
+    this.servicioLogin.disparadorDeLogin.email({
+      datos:this.dataEntrante
+    })
+  }*/
+}

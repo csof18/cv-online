@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataPorfolio } from 'src/app/modulos/data-porfolio';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
@@ -7,12 +8,12 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  banner: any;
+  public banner: string = "";
   constructor(private datosPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data => {
-      this.banner = data.informacion_personal;
+    this.datosPorfolio.obtenerDatos().subscribe((data: DataPorfolio) => {
+      this.banner = data.informacion_personal.banner;
     })
   }
 

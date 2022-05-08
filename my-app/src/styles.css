@@ -1,22 +1,4 @@
 body{
-    /*
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #000000 0%, #51190599 74%);
-    background-color: #f8002f;
-    background-image: linear-gradient(326deg, #56242d 0%, #000c14 74%);
-    background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
-    */
-    /*
-    background-color: #2234ae;
-    background-image: linear-gradient(315deg, #191714 0%, #131e69 74%, #2234ae 74%);
-    background-color: #0d0a0b;
-    
-    background-image: linear-gradient(315deg, #0d0a0b 0%, #054250 74%);
-    */
-    /*background-image: linear-gradient(315deg, #191714 0%, #131e69 60%, #0013938a 74%);
-    background-color: #0d0a0b;*/
-
     background-image: linear-gradient(315deg, #141313 0%, #131e69 60%, #00139333 74%);
     background-color: #0d0a0b;
     color: white;
