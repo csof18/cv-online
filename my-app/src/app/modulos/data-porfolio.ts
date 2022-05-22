@@ -29,12 +29,16 @@ export interface Habilidades {
 export interface Blanda {
     habilidad: string;
     img:       string;
+    habilidad_blanda: boolean;
+    habilidad_dura: boolean;
 }
 
 export interface Dura {
     habilidad: string;
     nivel:     string;
     img:       string;
+    habilidad_blanda: boolean;
+    habilidad_dura: boolean;
 }
 export interface InformacionPersonal {
     banner:      string;
@@ -43,6 +47,7 @@ export interface InformacionPersonal {
     apellido:    string;
     titulo:      string;
     acerca_de: string;
+    texto_banner: string;
 }
 
 export interface Proyecto {

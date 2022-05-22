@@ -1,0 +1,50 @@
+<section data-bs-toggle="modal" data-bs-target="#editarProyectos">
+    <app-botones-de-edicion></app-botones-de-edicion>
+
+    <div class="modal " id="editarProyectos" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editarProyectosLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+            <h5 class="modal-title" id="editarProyectosLabel">Experiencia</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formProyecto" class="modal-body fs-5">
+                    <div class="m-2 d-grid">
+        
+                        <label for="" class="m-2 fs-5">Nombre</label>
+                        <input type="text" formControlName="nombre" class="rounded fs-6 p-2">
+                    </div>
+                    
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5" >Fecha</label>
+                        <input type="date" formControlName="fecha" class="rounded fs-6 p-2">
+                            
+                    </div>
+        
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5" >Descripcion</label>
+                        <input   type="text" formControlName="descripcion" class="rounded fs-6 p-2" >
+                    </div>
+    
+                    <div class="m-2 d-grid">
+        
+                        <label for="" class="m-2 fs-5">Tecnologias</label>
+                        <input type="text" formControlName="tecnologias" class="rounded fs-6 p-2">
+                    </div>
+
+                    <div class="m-2 d-grid">
+        
+                        <label for="" class="m-2 fs-5">Link</label>
+                        <input type="text" formControlName="link" class="rounded fs-6 p-2">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
+                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>

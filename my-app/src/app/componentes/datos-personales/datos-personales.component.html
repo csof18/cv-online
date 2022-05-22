@@ -1,7 +1,9 @@
 <section class="datosPersonales">
-    <app-botones-de-edicion></app-botones-de-edicion>
-    <img class="rounded-circle perfil" src="{{datosPersonales.foto_perfil}}" alt="Foto de perfil">
-    <div class="datos">
+    <app-editar-datos-personales></app-editar-datos-personales>
+    <div>
+        <img class="rounded-circle perfil" src="{{datosPersonales.foto_perfil}}" alt="Foto de perfil">
+    </div>
+    <div class="datos m-2">
         <h1>{{datosPersonales.nombre}} {{datosPersonales.apellido}}</h1>
         <h3>{{datosPersonales.titulo}}</h3>
     </div>

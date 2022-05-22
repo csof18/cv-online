@@ -1,7 +1,7 @@
-<section class="gridEducacion">
+<section class="gridEducacion mt-4">
     <div class="titulos m-2">
-        <app-botones-de-edicion></app-botones-de-edicion>
-        <h3>Educacion</h3>
+       <app-editar-educacion></app-editar-educacion>
+            <h3>Educacion</h3>
         <ol>
             <li *ngFor="let educacion of listaEducacion">
                 <h6>{{educacion.titulo}}</h6>
@@ -11,7 +11,7 @@
         </ol>
     </div>
     <div class="cursos m-2">
-        <app-botones-de-edicion></app-botones-de-edicion>
+        <app-editar-cursos></app-editar-cursos>
         <h3>Cursos</h3>
         <ol>
             <li *ngFor="let cursos of listacursos">

@@ -1,12 +1,12 @@
 <section class="proyectos m-2">
-    <app-botones-de-edicion></app-botones-de-edicion>
+    <app-editar-proyectos></app-editar-proyectos>
     <h3>Proyectos</h3>
     <ol>
         <li *ngFor="let proyectos of listaProyectos">
-            <h6>{{proyectos.nombre}}</h6>
+            <h6 class="mb-3">{{proyectos.nombre}}</h6>
             <p>{{proyectos.tecnologias}}</p>
             <p><time>{{proyectos.fecha}}</time> | {{proyectos.descripcion}}</p>
-            <a [href]="proyectos.link" target="_blank">profolio</a>
+            <a class="m-2" [href]="proyectos.link" target="_blank"><i class="bi bi-github"></i> Portfolio</a>
         </li>
     </ol>
 </section>

@@ -11,4 +11,10 @@ export class NivelDeHabilidadesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  habilidades(): string {
+    const estrellaPintada="bi bi-star colorEstrella"
+    console.log(estrellaPintada, "me estan pintando");
+    return estrellaPintada;
+  }
 }

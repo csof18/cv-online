@@ -1,7 +1,14 @@
 .redesYlogin{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    /*
+    align-content: stretch;
+    align-items: center;
+    */
 }
-a:hover{
-    color: rgba(243, 243, 248, 0.718);
+
+@media(max-width:767px){
+    .redesYlogin{
+        align-items: center;
+    }
 }

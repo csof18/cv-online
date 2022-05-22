@@ -9,11 +9,13 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class BannerComponent implements OnInit {
   public banner: string = "";
+  public texto_banner: string = "";
   constructor(private datosPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe((data: DataPorfolio) => {
       this.banner = data.informacion_personal.banner;
+      this.texto_banner = data.informacion_personal.texto_banner;
     })
   }
 

@@ -6,7 +6,7 @@ body{
 ol{
     list-style: none;
     margin-bottom: 0px;
-    padding-left: 3%;
+    padding-left: 10px;
 }
 li{
     margin-bottom: 2%;
@@ -21,12 +21,12 @@ h3{
 h6{
     margin-bottom: 0%;
 }
-p{
-    margin: 0% 0% 0% 1%;
+a:hover{
+    color: rgba(243, 243, 248, 0.718);
 }
 .gridEncabezado{
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 50% 50%;
     grid-template-areas: 
     "encabezado botones"
     "banner banner"
@@ -46,7 +46,7 @@ p{
 .botones{
     font-size: 25px;
     grid-area: botones;
-    text-align: right;
+    padding-top: 30px;
 }
 .banner{
     grid-area: banner;
@@ -69,4 +69,39 @@ p{
 }
 .proyectos{
     grid-area: proyectos;
+}
+
+@media(max-width:767px){
+    .gridEncabezado{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "encabezado botones"
+        "banner banner"
+        "datosPersonales datosPersonales"
+        "acercaDe acercaDe"
+        "educacion educacion"
+        "experiencia experiencia"
+        "habilidadesuras habilidadesuras"
+        "proyectos proyectos";
+        border: solid;
+        border-color: black;
+    }
+    .encabezado{
+        grid-area: encabezado;
+        height: 90px;
+    }
+    .botones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: space-around;
+        padding-top: 20px;
+    }
+}
+@media(min-width:768px) and (max-width:991px){
+
+}
+@media(min-width:992px) and (max-width:1199px){
+
 }

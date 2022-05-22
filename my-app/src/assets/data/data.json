@@ -1,11 +1,12 @@
 {
     "informacion_personal": {
-        "banner" : "/assets/img/banner2.jpg",
-        "foto_perfil" : "/assets/img/fotoDePerfil.jpg",
         "nombre" : "Sofia",
         "apellido": "Corrado",
         "titulo" : "Full Stack Developer Jr.",
-        "acerca_de": "Soy una persona proactiva, motivada por obtener nuevos conocimientos. Luego de trabajar 10 años en ventas y atención al público, decidí cambiar de rumbo y dedicarme al desarrollo web, hoy en día me encuentro en búsqueda de mi primer empleo en el ámbito IT para continuar desarrollándome en nuevas tecnologías y metodologías que me permitan crecer"
+        "foto_perfil" : "/assets/img/perfil.jpg",
+        "banner" : "/assets/img/banner2.jpg",
+        "texto_banner" : "Lo único imposible, es aquello que no se intenta",
+        "acerca_de": "Soy una persona proactiva, organizada, responsable, teamplayer y creativa.Hoy me encuentro en búsqueda de mi primer empleo en el ámbito IT para así poder continuar creciendo y superar nuevos desafíos."
     },
     "experiencia" : [
         {
@@ -80,7 +81,7 @@
             "titulo" : "Bachiller en Humanidades y Ciencias Sociales",
             "fecha_inicio" : "Mar 2008",
             "fecha_fin" : "Dic 2010",
-            "establecimiento" : "Escuela Gral. D. M. Belgrano N13"
+            "establecimiento" : "Escuela Comercial N13"
         }
     ],
     "cursos" : [
@@ -135,59 +136,87 @@
     ],
     "habilidades" : {
         "blandas" : [{
+            "habilidad_blanda": true,
+            "habilidad_dura": false,
             "habilidad" : "Atención a los detalles",
+            "nivel": "4",
             "img" : "/assets/img/atencionEnLosDetalles.jpg"
         },
         {
+            "habilidad_blanda": true,
+            "habilidad_dura": false,
             "habilidad" : "Creatividad",
+            "nivel": "5",
             "img" : "/assets/img/creatividad.jpeg"
         },
         {
+            "habilidad_blanda": true,
+            "habilidad_dura": false,
             "habilidad" : "Trabajo en equipo",
+            "nivel": "4",
             "img" : "/assets/img/trabajoEnEquipo.jpg"
         },
         {
+            "habilidad_blanda": true,
+            "habilidad_dura": false,
             "habilidad" : "Empatía",
+            "nivel": "4",
             "img" : "/assets/img/empatia.jpg"
         }],
         "duras" : [{
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "HTML",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "3",
             "img" : "/assets/img/html.jpg"
         },
         {
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "CSS",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "3",
             "img" : "/assets/img/css.jpg"
         },
         {
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "JavaScript",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "2",
             "img" : "/assets/img/javascript.jpg"
         },
         {
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "TypeScript",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "1",
             "img" : "/assets/img/typescript.jpg"
         },
         {
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "Node Js",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "2",
             "img" : "/assets/img/nodejs.jpg"
         },
         {
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "React Js",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "2",
             "img" : "/assets/img/react.jpg"
         },
         {
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "Angular",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "1",
             "img" : "/assets/img/angular.png"
         },
         {
+            "habilidad_blanda": false,
+            "habilidad_dura": true,
             "habilidad" : "Java",
-            "nivel" : "bi bi-star colorEstrella",
+            "nivel" : "1",
             "img" : "/assets/img/java.jpg"
         }]
     },
@@ -197,35 +226,35 @@
             "fecha" : "Abr 2022",
             "descripcion" : "Creación de curriculom vitae propio y facilmente amoldable a optro usuario en un futuro.",
             "tecnologias" : ["HTML", "CSS", "Bootstrap", "Angular", "Typescript", "Java", "GIT"],
-            "link" : "LINK A GIT"
+            "link" : "https://github.com/csof18/full-stack-developer.git"
             },
         {
             "nombre" : "Regalame y regalate",
             "fecha" : "Ago 2021",
             "descripcion" : "Desarrollo de sitio web responsive con carrito de compras incluido",
             "tecnologias" : ["HTML", "CSS", "Bootstrap", "JavaScript", "React Js", "Node Js", "GIT"],
-            "link" : "LINK A GIT"
+            "link" : "https://github.com/csof18/cursoConReact.git"
         },
         {
             "nombre" : "Formulario de inscripciones para colegios",
             "fecha" : "Jul 2021",
             "descripcion" : "Desarrollo de formulario dinámico utilizado para consultar e inscribir alumnos en un establecimiento",
             "tecnologias" : ["HTML", "CSS", "Bootstrap", "JavaScript", "Jquery", "GIT"],
-            "link" : "LINK A GIT"
+            "link" : "https://github.com/csof18/formularioColegioJs.git"
         },
         {
             "nombre" : "Vida en pixeles",
             "fecha" : "May 2021",
             "descripcion" : "Desarrollo de sitio web responsive basada en una agencia de fotografía",
             "tecnologias" : ["HTML", "CSS", "SASS", "Bootstrap", "GIT"],
-            "link" : "LINK A GIT"
+            "link" : "https://github.com/csof18/vidaEnPixeles.git"
         },
         {
             "nombre" : "Escuela de Arte Culinario Argentino",
             "fecha" : "Ago 2020",
             "descripcion" : "Desarrollo de pagina web responsive de una escuela gastronomica",
             "tecnologias" : ["HTML", "CSS", "Bootstrap", "GIT"],
-            "link" : "LINK A GIT"
+            "link" : "https://github.com/csof18/EscuelaGastronomica.git"
         }
     ]
 }

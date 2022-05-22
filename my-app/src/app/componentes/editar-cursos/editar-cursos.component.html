@@ -1,0 +1,44 @@
+<section data-bs-toggle="modal" data-bs-target="#editarCurso">
+    <app-botones-de-edicion></app-botones-de-edicion>
+
+    <div class="modal " id="editarCurso" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editarCursoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+            <h5 class="modal-title" id="editarCursoLabel">Cursos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formCursos" class="modal-body fs-5">
+                    <div class="m-2 d-grid">
+        
+                        <label for="" class="m-2 fs-5">Titulo</label>
+                        <input type="text" formControlName="titulo" class="rounded fs-6 p-2">
+                    </div>
+                    
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5" >Fecha de inicio</label>
+                        <input type="date" formControlName="fecha_inicio" class="rounded fs-6 p-2">
+                            
+                    </div>
+        
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5" >Fecha finalización</label>
+                        <input   type="date" formControlName="fecha_fin" class="rounded fs-6 p-2" >
+                    </div>
+    
+                    <div class="m-2 d-grid">
+        
+                        <label for="" class="m-2 fs-5">Establecimiento</label>
+                        <input type="text" formControlName="establecimiento" class="rounded fs-6 p-2">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
+                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>

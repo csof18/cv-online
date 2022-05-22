@@ -1,0 +1,30 @@
+<section data-bs-toggle="modal" data-bs-target="#editarBanner">
+    <app-editar-banner></app-editar-banner>
+
+    <div class="modal " id="editarBanner" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editarBannerLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+            <h5 class="modal-title" id="editarBannerLabel">Banner</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formBanner" class="modal-body fs-5">
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5">Imagen</label>
+                        <input type="image" id="image" alt="Banner" formControlName="banner" class="rounded fs-6 p-2 tamañoImg"  src="#">
+                    </div>
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5">Texto</label>
+                        <input type="text" formControlName="texto_banner" class="rounded fs-6 p-2">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
+                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>

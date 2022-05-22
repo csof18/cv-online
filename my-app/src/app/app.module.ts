@@ -17,6 +17,14 @@ import { BotonesDeEdicionComponent } from './componentes/botones-de-edicion/boto
 import { NivelDeHabilidadesComponent } from './componentes/nivel-de-habilidades/nivel-de-habilidades.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditarDatosPersonalesComponent } from './componentes/editar-datos-personales/editar-datos-personales.component';
+import { EditarExperienciaComponent } from './componentes/editar-experiencia/editar-experiencia.component';
+import { EditarEducacionComponent } from './componentes/editar-educacion/editar-educacion.component';
+import { EditarCursosComponent } from './componentes/editar-cursos/editar-cursos.component';
+import { EditarHabilidadesComponent } from './componentes/editar-habilidades/editar-habilidades.component';
+import { EditarProyectosComponent } from './componentes/editar-proyectos/editar-proyectos.component';
+import { EditarBannerComponent } from './componentes/editar-banner/editar-banner.component';
+import { EditarAcercaDeComponent } from './componentes/editar-acerca-de/editar-acerca-de.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +39,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     DatosPersonalesComponent,
     BotonesDeEdicionComponent,
     NivelDeHabilidadesComponent,
-    LoginComponent
+    LoginComponent,
+    EditarDatosPersonalesComponent,
+    EditarExperienciaComponent,
+    EditarEducacionComponent,
+    EditarCursosComponent,
+    EditarHabilidadesComponent,
+    EditarProyectosComponent,
+    EditarBannerComponent,
+    EditarAcercaDeComponent
   ],
   imports: [
     BrowserModule,
