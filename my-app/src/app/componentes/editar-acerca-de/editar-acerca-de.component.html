@@ -1,6 +1,9 @@
 <section data-bs-toggle="modal" data-bs-target="#editarAcercaDe">
-    <app-botones-de-edicion></app-botones-de-edicion>
-
+    <div *ngIf="mostrarEditar" class="botonesEdicion">
+        <div class="d-flex justify-content-end w-100 mb-1">
+            <button type="button" class="btn btn-dark"><i class="bi bi-pencil"></i></button>    
+        </div>
+    </div>
     <div class="modal " id="editarAcercaDe" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editarAcercaDeLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content bg-dark text-white">
@@ -16,7 +19,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
-                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+                <button type="button" class="btn btn-dark" [disabled]="formAcercaDe.invalid"><i class="bi bi-pencil"></i></button>
             </div>
         </div>
         </div>

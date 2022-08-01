@@ -1,22 +1,36 @@
 <section class="gridEducacion mt-4">
-    <div class="titulos m-2">
+    <div class="titulos m-3">
        <app-editar-educacion></app-editar-educacion>
             <h3>Educacion</h3>
         <ol>
-            <li *ngFor="let educacion of listaEducacion">
-                <h6>{{educacion.titulo}}</h6>
-                <p><time>{{educacion.fecha_inicio}}</time> | <time>{{educacion.fecha_fin}}</time> | {{educacion.establecimiento}}</p>
+            <li *ngFor="let verEducacion of educacion">
+                <div class="modoEdicion">
+                    <div class="btnEdicion">
+                        <app-boton-eliminar></app-boton-eliminar>
+                    </div>
+                    <div class="contenido">
+                        <h6>{{verEducacion.titulo}}</h6>
+                        <p><time>{{verEducacion.fecha_inicio}}</time> | <time>{{verEducacion.fecha_fin}}</time> | {{verEducacion.establecimiento}}</p>
+                    </div>
+                </div>
                 
             </li>
         </ol>
     </div>
-    <div class="cursos m-2">
+    <div class="cursos m-3">
         <app-editar-cursos></app-editar-cursos>
         <h3>Cursos</h3>
         <ol>
-            <li *ngFor="let cursos of listacursos">
-                <h6>{{cursos.titulo}}</h6>
-                <p><time>{{cursos.fecha_inicio}}</time> | <time>{{cursos.fecha_fin}}</time> | {{cursos.establecimiento}}</p>
+            <li *ngFor="let verCursos of cursos">
+                <div class="modoEdicion">
+                    <div class="btnEdicion">
+                        <app-boton-eliminar></app-boton-eliminar>
+                    </div>
+                    <div class="contenido">
+                        <h6>{{verCursos.titulo}}</h6>
+                        <p><time>{{verCursos.fecha_inicio}}</time> | <time>{{verCursos.fecha_fin}}</time> | {{verCursos.establecimiento}}</p>
+                    </div>
+                </div>
             </li>
         </ol>
     </div>

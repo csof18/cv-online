@@ -1,0 +1,32 @@
+<section class="habilidadesBlandas m-3">
+    <app-editar-habilidades></app-editar-habilidades>
+    <h3>Habilidades</h3>
+    <div *ngFor="let verHabilidad of habilidades" class="card col-3 d-inline-block p-1">
+        <img src="{{verHabilidad.img}}" class="card-img-top" alt="{{verHabilidad.habilidad}}">
+        <div class="card-body habilidades">
+            <h6 class="card-title">{{verHabilidad.habilidad}}</h6>
+            <div>
+                <app-nivel-de-habilidades></app-nivel-de-habilidades>
+                <app-boton-eliminar></app-boton-eliminar>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <section class="habilidadesDuras m-3">
+    <h3 class="mt-4">Habilidades duras</h3>
+    <div *ngFor="let habilidadesDuras of habilidades" class="card col-3 d-inline-block p-1">
+        <img src="{{habilidadesDuras.img}}" class="card-img-top" alt="{{habilidadesDuras.habilidad}}">
+        <div class="card-body habilidades">
+            <h6 class="card-title">{{habilidadesDuras.habilidad}}</h6>
+            <div class="card-text">
+                <app-nivel-de-habilidades></app-nivel-de-habilidades>
+                <app-boton-eliminar></app-boton-eliminar>
+            </div>
+        </div>
+    </div>
+</section> -->
+<!--ESTRELLAS
+<button class="bi bi-star-fill colorEstrella"></button>
+<button class="bi bi-star-half colorEstrella"></button>
+-->

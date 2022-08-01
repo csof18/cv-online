@@ -21,11 +21,6 @@ export class LoginComponent implements OnInit {
       Validators.required,
       //Validators.minLength(5),
       Validators.maxLength(15)
-    ]),
-    repeatPassword: new FormControl('', [
-      //Validators.required,
-      Validators.minLength(5),
-      Validators.maxLength(15)
     ])
   });
   constructor(private servicioDeLogin: LoginService) { }
@@ -37,9 +32,6 @@ export class LoginComponent implements OnInit {
   }
   get password(): any{
     return this.loginForm.get('password');
-  }
-  get repeatPassword(): any{
-    return this.loginForm.get('repeatPassword');
   }
   onSubmit(): void{
     this.servicioDeLogin.login().subscribe( data => {
@@ -56,17 +48,7 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  //BOTON REGISTRAR
-  public registrar: boolean = false;
-  registrarse() {
-    if(this.registrar){
-      this.repeatPassword.Validators.required;
-      console.log('estoy en true');
-    }else{
-      this.registrar = true;
-      console.log('estoy en false');
-    }
-  }
+
  
 
   //public cerrarSecion:boolean = false;

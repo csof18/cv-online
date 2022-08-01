@@ -36,9 +36,10 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
-                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+                <button type="button" class="btn btn-dark" (click)="guardarHabilidades()" [disabled]="formExperiencia.invalid"><i class="bi bi-pencil"></i></button>
             </div>
         </div>
         </div>
+        <p *ngIf="msjGuardar" class="m-4">Su experiencia laboral fue creadada correctamente</p>
     </div>
 </section>

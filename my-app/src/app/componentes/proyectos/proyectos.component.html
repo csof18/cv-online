@@ -1,12 +1,27 @@
-<section class="proyectos m-2">
+<section class="proyectos m-3">
     <app-editar-proyectos></app-editar-proyectos>
     <h3>Proyectos</h3>
     <ol>
-        <li *ngFor="let proyectos of listaProyectos">
-            <h6 class="mb-3">{{proyectos.nombre}}</h6>
-            <p>{{proyectos.tecnologias}}</p>
-            <p><time>{{proyectos.fecha}}</time> | {{proyectos.descripcion}}</p>
-            <a class="m-2" [href]="proyectos.link" target="_blank"><i class="bi bi-github"></i> Portfolio</a>
+        <li *ngFor="let verProyectos of proyectos">
+            <div class="modoEdicion">
+                <div class="btnEdicion">
+                    <div *ngIf="btnEliminar" class="mt-2 mb-1">
+                        <div class="d-flex justify-content-end w-100">
+                            <div class="btn-group" role="group" aria-label="Basic example" data-bs-toggle="modal" data-bs-target="#editarProyectos">
+                                <button type="button" class="btn btn-dark btnEditar"><i class="bi bi-pencil" ></i></button>
+                                <button type="button" class="btn btn-dark btnEditar" data-bs-dismiss="modal" ><i class="bi bi-trash3"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <app-boton-eliminar></app-boton-eliminar> -->
+                </div>
+                <div class="contenido">
+                    <h6 class="mb-3">{{verProyectos.nombre}}</h6>
+                    <p>{{verProyectos.tecnologias}}</p>
+                    <p><time>{{verProyectos.fecha}}</time> | {{verProyectos.descripcion}}</p>
+                    <a class="m-2" [href]="verProyectos.link" target="_blank"><i class="bi bi-github"></i> Portfolio</a>
+                </div>
+            </div>            
         </li>
     </ol>
 </section>

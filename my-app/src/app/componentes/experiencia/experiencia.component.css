@@ -1,3 +1,15 @@
 .experiencia{
     position: relative;
 }
+.modoEdicion{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-areas:
+    "contenido  btnEdicion";
+}
+.btnEdicion{
+    grid-area: btnEdicion;
+}
+.contenido{
+    grid-area: contenido;
+}

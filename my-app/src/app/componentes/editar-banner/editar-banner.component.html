@@ -1,5 +1,5 @@
 <section data-bs-toggle="modal" data-bs-target="#editarBanner">
-    <app-editar-banner></app-editar-banner>
+    <app-botones-de-edicion></app-botones-de-edicion>
 
     <div class="modal " id="editarBanner" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editarBannerLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -22,7 +22,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
-                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+                <button type="button" class="btn btn-dark" [disabled]="formBanner.invalid"><i class="bi bi-pencil"></i></button>
             </div>
         </div>
         </div>

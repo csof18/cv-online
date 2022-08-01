@@ -1,6 +1,6 @@
 <section data-bs-toggle="modal" data-bs-target="#editEducacion">
     <app-botones-de-edicion></app-botones-de-edicion>
-
+        
     <div class="modal " id="editEducacion" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editEducacionLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content bg-dark text-white">
@@ -36,9 +36,16 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
-                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+                <button type="button" class="btn btn-dark" (click)="guardarEducacion()" [disabled]="formEducacion.invalid"><i class="bi bi-pencil"></i></button>
             </div>
         </div>
         </div>
+        <p *ngIf="msjGuardar" class="m-4">Su educación fue creadada correctamente</p>
     </div>
 </section>
+
+<!--
+    <i class="bi bi-x-square-fill"></i> cruz
+    <i class="bi bi-plus-square-fill"></i> mas
+    <i class="bi bi-brush"></i> pincel
+-->

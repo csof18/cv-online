@@ -1,4 +1,74 @@
 export interface DataPorfolio {
+    usuario: Usuario;
+    DatosPersona: DatosPersona;
+    experiencia: Experiencia[];
+    educacion: Educacion[];
+    cursos: Cursos[];
+    habilidades: Habilidades[];
+    proyectos: Proyectos[];
+}
+
+    export interface Usuario {
+        id: number;
+        usser: string;
+        pasword: string;
+    }
+
+    export interface DatosPersona {
+        id : number;
+        nombre: string;
+        apellido: string;
+        titulo: string;
+        foto_perfil: string;
+        banner: string;
+        texto_banner: string;
+        acerca_de: string;
+    }
+
+    export interface Experiencia {
+        id: number;
+        posicion: string;
+        fecha_inicio: string;
+        fecha_fin: string;
+        empresa: string;
+    }
+
+    export interface Educacion {
+        id: number;
+        titulo: string;
+        fecha_inicio: string;
+        fecha_fin: string;
+        establecimiento: string;
+    }
+
+    export interface Cursos {
+        id: number;
+        titulo: string;
+        fecha_inicio: string;
+        fecha_fin: string;
+        establecimiento: string;
+    }
+
+    export interface Habilidades {
+        id: number;
+        habilidad: string;
+        nivel: string;
+        img: string;
+        habilidad_blanda: boolean;
+        habilidad_dura: boolean;
+    }
+
+    export interface Proyectos {
+        id: number;
+        nombre: string;
+        fecha: string;
+        descripcion: string;
+        tecnologias: string[];
+        link: string;
+    }
+
+/*
+export interface DataPorfolio {
     informacion_personal: InformacionPersonal;
     experiencia:          Experiencia[];
     educacion:            Estudio[];
@@ -57,3 +127,5 @@ export interface Proyecto {
     tecnologias: string[];
     link:        string;
 }
+
+*/

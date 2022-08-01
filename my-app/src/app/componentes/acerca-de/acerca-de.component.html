@@ -1,7 +1,7 @@
 <section class="acercaDe m-2">
     <app-editar-acerca-de></app-editar-acerca-de>
-    <div>
+    <div  *ngFor="let datos of datosPersonales">
         <h3>Sobre mí</h3>
-        <p>{{acercaDe}}</p>
+        <p>{{datos.acerca_de}}</p>
     </div>
 </section>

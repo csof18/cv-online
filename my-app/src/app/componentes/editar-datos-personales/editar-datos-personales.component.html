@@ -1,4 +1,54 @@
 <section data-bs-toggle="modal" data-bs-target="#editarDatosPersonales">
+    <div *ngIf="mostrarEditar" class="botonesEdicion">
+        <div class="d-flex justify-content-end w-100 mb-1">
+            <button type="button" class="btn btn-dark"><i class="bi bi-pencil"></i></button>    
+        </div>
+    </div>
+    <div class="modal " id="editarDatosPersonales" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editarDatosPersonalesLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+            <h5 class="modal-title" id="editarDatosPersonalesLabel">Datos personales</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- [formGroup]="datosPersona" -->
+                <form   *ngFor="let datos of datosPersonales" class="modal-body fs-5">
+                    <div class="m-2 d-grid">
+        
+                        <label for="" class="m-2 fs-5">Nombre</label>
+                        <input type="text" formControlName="nombre" class="rounded fs-6 p-2" placeholder="{{datos.nombre}}">
+                    </div>
+                    
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5" >Apellido</label>
+                        <input type="text" formControlName="apellido" class="rounded fs-6 p-2" placeholder="{{datos.apellido}}">
+                            
+                    </div>
+        
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5" >Titulo</label>
+                        <input type="text" formControlName="titulo" class="rounded fs-6 p-2" placeholder="{{datos.titulo}}">
+                    </div>
+    
+                    <div class="m-2 d-grid">
+                        <label for="" class="m-2 fs-5">Foto de perfil</label>
+                        <input type="text" formControlName="foto_perfil" class="rounded fs-6 p-2" placeholder="{{datos.foto_perfil}}">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
+                <button type="button" class="btn btn-dark" (click)="guardarDatosPersonaEditados()" [disabled]="formDatosPersona.invalid"><i class="bi bi-pencil"></i>Editar</button>
+            </div>
+            <p *ngIf="msjGuardar" class="m-4">Sus datos fueron editados correctamente</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- <section data-bs-toggle="modal" data-bs-target="#editarDatosPersonales">
     <app-botones-de-edicion></app-botones-de-edicion>
 
     <div class="modal " id="editarDatosPersonales" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="editarDatosPersonalesLabel" aria-hidden="true">
@@ -9,106 +59,46 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form [formGroup]="formDatosPersonales" class="modal-body fs-5">
+                <form [formGroup]="datosPersona" class="modal-body fs-5">
                     <div class="m-2 d-grid">
         
                         <label for="" class="m-2 fs-5">Nombre</label>
-                        <input type="text" formControlName="nombre" class="rounded fs-6 p-2">
+                        <select name="nombre" id="nombre" formControlName="nombre" class="form-control">
+                            <option value="item.id" *ngFor="let item of nombres"></option>
+                        </select>
                     </div>
                     
                     <div class="m-2 d-grid">
                         <label for="" class="m-2 fs-5" >Apellido</label>
-                        <input type="text" formControlName="apellido" class="rounded fs-6 p-2">
-                            
+
+                          <select name="apellido" id="apellido" formControlName="apellido" class="form-control">
+                            <option value="item.id" *ngFor="let item of apellidos"></option>
+                          </select>  
                     </div>
         
                     <div class="m-2 d-grid">
                         <label for="" class="m-2 fs-5" >Titulo</label>
-                        <input type="text" formControlName="titulo" class="rounded fs-6 p-2" >
+
+                        <select name="titulo" id="titulo" formControlName="titulo" class="form-control">
+                            <option value="item.id" *ngFor="let item of titulos"></option>
+                        </select>
                     </div>
     
                     <div class="m-2 d-grid">
                         <label for="" class="m-2 fs-5">Foto de perfil</label>
-                        <input type="text" formControlName="foto_perfil" class="rounded fs-6 p-2">
+
+                        <select name="fotoPerfil" id="fotoPerfil" formControlName="foto_perfil" class="form-control">
+                            <option value="item.id" *ngFor="let item of fotosPerfil"></option>
+                        </select>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal" (ngSubmit)="guardarDatosPersona()"><i class="bi bi-trash3"></i></button>
                 <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
             </div>
+            <p *ngIf="msjGuardar">Sus datos fueron guardados</p>
         </div>
         </div>
     </div>
-</section>
-<!--
-<section>
-    <button type="button" class="btn btn-dark m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        EDITAR
-    </button>
-    <button type="button" class="btn btn-dark"><i class="bi bi-trash3"></i></button>
-
-    <!- Modal --
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark text-white">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-            <button type="button" class="btn m-2 btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="modal-body fs-5">
-            <div class="m-2 d-grid">
-
-                <label for="" class="m-2">Nombre</label>
-                <input type="text" formControlName="nombre" class="rounded fs-6 p-2" placeholder="Nombre completo">
-            </div>
-
-            <div class="m-2 d-grid">
-                <label for="" class="m-2" >Apellido</label>
-                <input type="text" formControlName="apellido" class="rounded fs-6 p-2" placeholder="Apellido">
-                    <div *ngIf="password?.errors?.maxlength">
-                        <p class="fs-6">
-                            La contraseña es incorrecta, debe contener mas de 5 y hasta 15 caracteres.
-                        </p>
-                    </div>
-            </div>
-
-            <div class="m-2 d-grid">
-                <label for="" class="m-2" >Titulo</label>
-                <input   type="text" formControlName="titulo" class="rounded fs-6 p-2" placeholder="Titulo">
-            </div>
-
-            <div class="m-2 d-grid">
-
-                <label for="" class="m-2">Foto de perfil</label>
-                <input type="image" id="image" alt="IMAGEN" formControlName="foto_perfil" class="rounded fs-6 p-2"  src="/assets/img/perfil.jpg">
-            </div>
-
-            <div class="m-2 d-grid">
-                <p>Banner</p>
-                <a href="/assets/img/perfil.jpg"formControlName="banner" class="rounded fs-6 p-2" ></a>
-            </div>
-
-            <div>
-                <label for="imageFile">Selecciona algunas imágenes:</label>
-	            <input formControlName="banner2" type="file" id="imageFile" accept="image/*" multiple>
-            </div>
-
-            <div class="m-2 d-grid">
-
-                <label for="" class="m-2">Sobre mi</label>
-                <input type="text" formControlName="acerca_de" class="rounded fs-6 p-2" placeholder="Sobre mi">
-            </div>
-        </form>
-        <div class="modal-footer">
-            <button [disabled]="loginForm.invalid" class="m-2 btn btn-dark" data-bs-dismiss="modal">Editar</button>
-        </div>
-        </div>
-    </div>
-    </div>
-</section>
-
-
-
-
--->
+</section> -->

@@ -18,26 +18,20 @@
             <div class="m-2 d-grid">
 
                 <label for="" class="m-2">Usuario</label>
-                <input type="email" formControlName="users" class="rounded fs-6 p-2" placeholder="ejemplo@gmail.com">
+                <input type="email" formControlName="users" class="rounded fs-6 p-2" placeholder="ejemplo@gmail.com"> <!-- required="users"> -->
             </div>
             <div class="m-2 d-grid">
 
                 <label for="" class="m-2" >Contraseña</label>
-                <input type="password" formControlName="password" class="rounded fs-6 p-2" placeholder="Debe contener almenos 5 caracteres">
+                <input type="password" formControlName="password" class="rounded fs-6 p-2" placeholder="Debe contener almenos 5 caracteres"> <!-- required="password"> -->
             <div *ngIf="password?.errors?.maxlength">
                 <p class="fs-6">
                     La contraseña es incorrecta, debe contener mas de 5 y hasta 15 caracteres.
                 </p>
             </div>
             </div>
-
-            <div *ngIf="registrar" class="m-2 d-grid">
-                <label for="" class="m-2" >Confirmar contraseña</label>
-                <input   type="password" formControlName="repeatPassword" class="rounded fs-6 p-2" placeholder="Debe contener almenos 5 caracteres">
-            </div>
         </form>
         <div class="modal-footer">
-            <button *ngIf="registro" type="button" (click)="registrarse()" class="m-2 btn btn-dark">Registrarse</button>
             <button  type="submit" (click)="mostrarEdicion()"  [disabled]="loginForm.invalid" class="m-2 btn btn-dark" data-bs-dismiss="modal">Ingresar</button>
            <!-- <button *ngIf="salir" type="submit" (click)="deslogearse()" class="m-2 btn btn-dark" data-bs-dismiss="modal">Salir</button>-->
         </div>

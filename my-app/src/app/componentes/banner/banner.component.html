@@ -1,5 +1,5 @@
-<figure class="banner">
+<figure class="banner"  *ngFor="let datos of datosPersonales">
     <app-editar-banner></app-editar-banner>
-    <img src="{{banner}}" alt="Ver banner">
-    <figcaption class="texto">{{texto_banner}}</figcaption>
+    <img src="{{datos.banner}}" alt="Ver banner">
+    <figcaption class="texto">{{datos.texto_banner}}</figcaption>
 </figure>

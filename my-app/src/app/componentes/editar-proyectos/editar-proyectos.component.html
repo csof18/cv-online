@@ -9,22 +9,22 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form [formGroup]="formProyecto" class="modal-body fs-5">
+                <form [formGroup]="formProyecto" (ngSubmit)="guardarProyectos()" class="modal-body fs-5">
                     <div class="m-2 d-grid">
         
                         <label for="" class="m-2 fs-5">Nombre</label>
-                        <input type="text" formControlName="nombre" class="rounded fs-6 p-2">
+                        <input type="text" formControlName="nombre" onchange="nombre" class="rounded fs-6 p-2">
                     </div>
                     
                     <div class="m-2 d-grid">
                         <label for="" class="m-2 fs-5" >Fecha</label>
-                        <input type="date" formControlName="fecha" class="rounded fs-6 p-2">
+                        <input type="date" formControlName="fecha" [value]="proyectos.fecha" class="rounded fs-6 p-2">
                             
                     </div>
         
                     <div class="m-2 d-grid">
                         <label for="" class="m-2 fs-5" >Descripcion</label>
-                        <input   type="text" formControlName="descripcion" class="rounded fs-6 p-2" >
+                        <input   type="text" formControlName="descripcion" value="descripcion" class="rounded fs-6 p-2" >
                     </div>
     
                     <div class="m-2 d-grid">
@@ -42,9 +42,11 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-bs-dismiss="modal"><i class="bi bi-trash3"></i></button>
-                <button type="button" class="btn btn-dark" ><i class="bi bi-pencil"></i></button>
+                <button type="submit" class="btn btn-dark"  (click)="guardarProyectos()" [disabled]="formProyecto.invalid"><i class="bi bi-pencil"></i>Agregar</button>
+                <button type="submit" class="btn btn-dark"  (click)="edicionDeProyecto()" [disabled]="formProyecto.invalid"><i class="bi bi-pencil"></i>Editar</button>
             </div>
         </div>
-        </div>
+    </div>
+    <p *ngIf="msjGuardar" class="m-4">Su proyecto fue creado correctamente</p>
     </div>
 </section>

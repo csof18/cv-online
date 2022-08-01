@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { map } from 'rxjs';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { DataPorfolio, Proyecto } from 'src/app/modulos/data-porfolio'
+import { LoginService } from 'src/app/servicios/login.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -9,18 +8,43 @@ import { DataPorfolio, Proyecto } from 'src/app/modulos/data-porfolio'
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-  listaProyectos:any;
-  constructor(private datosPortfolio:PorfolioService) { }
+  public proyectos:any;
+  public btnEliminar: boolean;
+  public formProyecto: any;
+  constructor(private datosPortfolio:PortfolioService,
+    private servicioDeLogin: LoginService) { 
+      this.btnEliminar = false;
+    }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data: DataPorfolio)=> {
-      this.listaProyectos = data.proyectos.map(proyecto => ({
-        nombre: proyecto.nombre,
-        fecha: proyecto.fecha,
-        descripcion: proyecto.descripcion,
-        link: proyecto.link,
-        tecnologias: proyecto.tecnologias.join(" | "),
-      }))
+    this.oProyectos();
+    this.servicioDeLogin.logueado.subscribe(data => {
+      if(data){
+        this.btnEliminar = true;
+        console.log('BOTON BORRAR TRUE');
+      }else{
+        this.btnEliminar = false;
+        console.log('BTN ELIMINAR FALSO');
+      }
     })
   }
+  oProyectos(){
+    this.datosPortfolio.obtenerProyectos().subscribe((data)=> {
+      this.proyectos = data;
+    })
+  }
+  // edicionDeProyecto(){
+  //   this.datosPortfolio.editarProyectos(this.formProyecto.value).subscribe(editData=>{
+ 
+  //     this.formProyecto.setValue({
+  //       nombre: this.proyectos.nombre,
+  //       fecha: this.proyectos.fecha,
+  //       descripcion: this.proyectos.descripcion,
+  //       tecnologias: this.proyectos.tecnologias,
+  //       link: this.proyectos.link
+  //      })
+  //      console.log( this.proyectos.nombre, 'VER VALOR DE  nombre: proyectos.nombre')
+  //    })
+  //    console.log('EDITAAAAAAAAAAAAAAR PROYECTO');
+  //  }
 }

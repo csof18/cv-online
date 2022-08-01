@@ -14,7 +14,6 @@ export class NivelDeHabilidadesComponent implements OnInit {
   
   habilidades(): string {
     const estrellaPintada="bi bi-star colorEstrella"
-    console.log(estrellaPintada, "me estan pintando");
     return estrellaPintada;
   }
 }

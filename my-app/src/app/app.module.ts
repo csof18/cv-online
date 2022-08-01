@@ -7,7 +7,7 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
-import { HabilidadesurasBlandasComponent } from './componentes/habilidadesuras-blandas/habilidadesuras-blandas.component';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { BotonesComponent } from './componentes/botones/botones.component';
 import { BannerComponent } from './componentes/banner/banner.component';
@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BotonesDeEdicionComponent } from './componentes/botones-de-edicion/botones-de-edicion.component';
 import { NivelDeHabilidadesComponent } from './componentes/nivel-de-habilidades/nivel-de-habilidades.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditarDatosPersonalesComponent } from './componentes/editar-datos-personales/editar-datos-personales.component';
 import { EditarExperienciaComponent } from './componentes/editar-experiencia/editar-experiencia.component';
 import { EditarEducacionComponent } from './componentes/editar-educacion/editar-educacion.component';
@@ -25,6 +25,7 @@ import { EditarHabilidadesComponent } from './componentes/editar-habilidades/edi
 import { EditarProyectosComponent } from './componentes/editar-proyectos/editar-proyectos.component';
 import { EditarBannerComponent } from './componentes/editar-banner/editar-banner.component';
 import { EditarAcercaDeComponent } from './componentes/editar-acerca-de/editar-acerca-de.component';
+import { BotonEliminarComponent } from './componentes/boton-eliminar/boton-eliminar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,7 @@ import { EditarAcercaDeComponent } from './componentes/editar-acerca-de/editar-a
     AcercaDeComponent,
     EducacionComponent,
     ExperienciaComponent,
-    HabilidadesurasBlandasComponent,
+    HabilidadesComponent,
     ProyectosComponent,
     BotonesComponent,
     BannerComponent,
@@ -47,13 +48,17 @@ import { EditarAcercaDeComponent } from './componentes/editar-acerca-de/editar-a
     EditarHabilidadesComponent,
     EditarProyectosComponent,
     EditarBannerComponent,
-    EditarAcercaDeComponent
+    EditarAcercaDeComponent,
+    BotonEliminarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    FormsModule
+    // BrowserAnimationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,10 +1,17 @@
-<section class="experiencia m-2">
+<section class="experiencia m-3">
     <app-editar-experiencia></app-editar-experiencia>
     <h3>Experiencia laboral</h3>
     <ol>
-        <li *ngFor="let experiencia of listaExperiencia">
-            <h6>{{experiencia.posicion}}</h6>
-            <p><time>{{experiencia.fecha_inicio}}</time> | <time>{{experiencia.fecha_fin}}</time> | {{experiencia.empresa}}</p>
+        <li *ngFor="let verExperiencia of experiencia">
+            <div class="modoEdicion">
+                <div class="btnEdicion">
+                    <app-boton-eliminar></app-boton-eliminar>
+                </div>
+                <div class="contenido">
+                    <h6>{{verExperiencia.posicion}}</h6>
+                    <p><time>{{verExperiencia.fecha_inicio}}</time> | <time>{{verExperiencia.fecha_fin}}</time> | {{verExperiencia.empresa}}</p>
+                </div>
+            </div>
         </li>
     </ol>
 </section>

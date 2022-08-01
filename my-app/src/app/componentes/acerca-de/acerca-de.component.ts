@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataPorfolio } from 'src/app/modulos/data-porfolio';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { of } from 'rxjs';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-acerca-de',
@@ -8,15 +8,18 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  public acercaDe: string = "";
-  constructor(private datosPortfolio:PorfolioService) {
+  public datosPersonales: any;
+  constructor(private datosPortfolio:PortfolioService) {
    }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe((data: DataPorfolio) =>{
-      this.acercaDe = data.informacion_personal.acerca_de;
-    }
-    )
+    this.oDatosPersona()
+  }
+
+  oDatosPersona(){
+    this.datosPortfolio.obtenerDatosPersona().subscribe((data)=> {
+      this.datosPersonales = data;
+    })
   }
 
 }

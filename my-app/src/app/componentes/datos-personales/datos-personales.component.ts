@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataPorfolio, InformacionPersonal } from 'src/app/modulos/data-porfolio';
-import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-datos-personales',
@@ -9,12 +8,17 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
 })
 export class DatosPersonalesComponent implements OnInit {
   public datosPersonales:any;
-  constructor(private datosPorfolio:PorfolioService) { }
+  constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe((data: DataPorfolio)=> {
-      this.datosPersonales = data.informacion_personal;
+    this.oDatosPersona()
+  }
+  
+  oDatosPersona(){
+    this.datosPortfolio.obtenerDatosPersona().subscribe((data)=> {
+      this.datosPersonales = data;
+      console.log(data, 'VER DATA EN DATOS PERSONALES');
+      console.log(this.datosPersonales, 'VER this.datosPersonales EN DATOS PERSONALES');
     })
   }
-
 }
